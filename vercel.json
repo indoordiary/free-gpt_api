@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "regions": ["hnd1"],
+  "rewrites": [
+    {
+      "source": "/v1/chat/completions",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/",
+      "destination": "/api/guide"
+    }
+  ],
+  "functions": {
+    "api/**/*": {
+      "maxDuration": 60
+    }
+  }
+}
